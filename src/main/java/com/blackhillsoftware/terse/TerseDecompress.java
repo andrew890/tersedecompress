@@ -60,7 +60,7 @@ public class TerseDecompress {
      * an error message.
      */
 
-    private void process (String args[]) throws IOException {
+    private void process (String args[]) throws IOException  {
 
         if (args.length == 0 || args.length > 3) 
         {
@@ -108,16 +108,17 @@ public class TerseDecompress {
 
         System.out.println("Attempting to decompress input file (" + args[0] +") to output file (" + args[1] +")");
 
-        if (!header_rv.SpackFlag) {
-        	NonSpack.decodeNonSpack(header_rv, input, OutputBufferedStream);
-        } else {
-        	Spack spack = new Spack();
-        	spack.decodeSpack(header_rv, input, OutputBufferedStream);
+        try (DecompressedOutputWriter writer = new DecompressedOutputWriter(header_rv, OutputBufferedStream))
+        {
+	        if (!header_rv.SpackFlag) {
+	        	NonSpack.decodeNonSpack(header_rv, input, writer);
+	        } else {
+	        	Spack spack = new Spack();
+	        	spack.decodeSpack(header_rv, input, writer);
+	        }
         }
 
         BufferedStream.close();
-        OutputBufferedStream.flush();
-        OutputBufferedStream.close();
 
         System.out.println("Processing completed");
         if (DEBUG) {

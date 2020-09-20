@@ -3,7 +3,7 @@ package com.blackhillsoftware.terse;
 import java.io.IOException;
 import java.io.OutputStream;
 
-class DecompressedOutputWriter 
+class DecompressedOutputWriter implements AutoCloseable
 {
 	OutputStream stream;
 	
@@ -32,7 +32,6 @@ class DecompressedOutputWriter
     	stream.write(lineseparator);
         return;
     }
-
 
     /*
      * Write some stuff to the output file
@@ -66,4 +65,11 @@ class DecompressedOutputWriter
             }
         }
     }
+
+
+	@Override
+	public void close() throws IOException 
+	{
+		this.stream.close();
+	}
 }
