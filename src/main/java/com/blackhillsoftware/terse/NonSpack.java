@@ -1,7 +1,6 @@
 package com.blackhillsoftware.terse;
 
 import java.io.IOException;
-import java.io.OutputStream;
 
 class NonSpack {
 		
