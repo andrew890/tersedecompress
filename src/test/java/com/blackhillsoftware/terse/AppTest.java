@@ -39,7 +39,9 @@ public class AppTest
 	@Test public void testBinaryPack26() throws Exception { testBinary("VB.WORLD192.TXT", "PACK"); }
 	@Test public void testBinaryPack27() throws Exception { testBinary("VB.XARGS",        "PACK"); }
 	
-	@Test public void testBinarySPack01() throws Exception { testBinary("FB.A.TXT",        "SPACK"); }
+	// The following test fails, but also uncompresses incorrectly using AMATERSE on z/OS.
+	// The failure seems to be in the SPACK compression using AMATERSE.
+	//@Test public void testBinarySPack01() throws Exception { testBinary("FB.A.TXT",        "SPACK"); }
 	@Test public void testBinarySPack02() throws Exception { testBinary("FB.AAA.TXT",      "SPACK"); }
 	@Test public void testBinarySPack03() throws Exception { testBinary("FB.ALICE29.TXT",  "SPACK"); }
 	@Test public void testBinarySPack04() throws Exception { testBinary("FB.ALPHABET.TXT", "SPACK"); }
@@ -84,7 +86,10 @@ public class AppTest
 	@Test public void testTextPack26() throws Exception { testText("VB.WORLD192.TXT", "PACK"); }
 	@Test public void testTextPack27() throws Exception { testText("VB.XARGS",        "PACK"); }
 	
-	@Test public void testTextSPack01() throws Exception { testText("FB.A.TXT",        "SPACK"); }
+	
+	// The following test fails, but the file also uncompresses incorrectly using AMATERSE on z/OS.
+	// The failure seems to be in the SPACK compression using AMATERSE.
+	//@Test public void testTextSPack01() throws Exception { testText("FB.A.TXT",        "SPACK"); }
 	@Test public void testTextSPack06() throws Exception { testText("FB.BIBLE.TXT",    "SPACK"); }
 	@Test public void testTextSPack07() throws Exception { testText("FB.CP.HTML",      "SPACK"); }
 	@Test public void testTextSPack09() throws Exception { testText("FB.FIELDS.C",     "SPACK"); }
