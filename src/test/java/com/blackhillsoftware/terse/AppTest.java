@@ -108,8 +108,8 @@ public class AppTest
 	
 	private void testBinary(String file, String packSpack) throws Exception 
 	{
-		String tersed = location + "/TERSED/" + file + "." + packSpack;
-		String untersed = location + "/ZOSBINARY/" + file;
+		String tersed = location + "/Z." + file + "." + packSpack;
+		String untersed = location + "/zos-binary-xfer/" + file;
 		
 		byte[] expected = Files.readAllBytes(Paths.get(untersed));
 		
@@ -125,8 +125,8 @@ public class AppTest
 	
 	private void testText(String file, String packSpack) throws Exception 
 	{
-		String tersed = location + "/TERSED/" + file + "." + packSpack;
-		String untersed = location + "/ZOSTEXT/" + file;
+		String tersed = location + "/Z." + file + "." + packSpack;
+		String untersed = location + "/zos-text-xfer/" + file;
 		
 		// Assumes that the record separators in the ZOSTEXT file are correct for this system, 
 		// i.e. the data was checked out in text mode with git crlf conversion or otherwise
