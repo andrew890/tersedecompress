@@ -20,7 +20,7 @@ public class AppTest
 	@Test public void testBinaryPack07() throws Exception { testBinary("FB.CP.HTML",      "PACK"); }
 	@Test public void testBinaryPack08() throws Exception { testBinary("FB.E.COLI",       "PACK"); }
 	@Test public void testBinaryPack09() throws Exception { testBinary("FB.FIELDS.C",     "PACK"); }
-	@Test public void testBinaryPack00() throws Exception { testBinary("FB.GRAMMAR.LSP",  "PACK"); }
+	@Test public void testBinaryPack10() throws Exception { testBinary("FB.GRAMMAR.LSP",  "PACK"); }
 	@Test public void testBinaryPack11() throws Exception { testBinary("FB.KENNEDY.XLS",  "PACK"); }
 	@Test public void testBinaryPack12() throws Exception { testBinary("FB.LCET10.TXT",   "PACK"); }
 	@Test public void testBinaryPack13() throws Exception { testBinary("FB.PI.TXT",       "PACK"); }
@@ -50,7 +50,7 @@ public class AppTest
 	@Test public void testBinarySPack07() throws Exception { testBinary("FB.CP.HTML",      "SPACK"); }
 	@Test public void testBinarySPack08() throws Exception { testBinary("FB.E.COLI",       "SPACK"); }
 	@Test public void testBinarySPack09() throws Exception { testBinary("FB.FIELDS.C",     "SPACK"); }
-	@Test public void testBinarySPack00() throws Exception { testBinary("FB.GRAMMAR.LSP",  "SPACK"); }
+	@Test public void testBinarySPack10() throws Exception { testBinary("FB.GRAMMAR.LSP",  "SPACK"); }
 	@Test public void testBinarySPack11() throws Exception { testBinary("FB.KENNEDY.XLS",  "SPACK"); }
 	@Test public void testBinarySPack12() throws Exception { testBinary("FB.LCET10.TXT",   "SPACK"); }
 	@Test public void testBinarySPack13() throws Exception { testBinary("FB.PI.TXT",       "SPACK"); }
@@ -73,13 +73,12 @@ public class AppTest
 	@Test public void testTextPack06() throws Exception { testText("FB.BIBLE.TXT",    "PACK"); }
 	@Test public void testTextPack07() throws Exception { testText("FB.CP.HTML",      "PACK"); }
 	@Test public void testTextPack09() throws Exception { testText("FB.FIELDS.C",     "PACK"); }
-	@Test public void testTextPack00() throws Exception { testText("FB.GRAMMAR.LSP",  "PACK"); }
+	@Test public void testTextPack10() throws Exception { testText("FB.GRAMMAR.LSP",  "PACK"); }
 	@Test public void testTextPack12() throws Exception { testText("FB.LCET10.TXT",   "PACK"); }
 	@Test public void testTextPack18() throws Exception { testText("FB.WORLD192.TXT", "PACK"); }
 	@Test public void testTextPack19() throws Exception { testText("FB.XARGS",        "PACK"); }
 	@Test public void testTextPack20() throws Exception { testText("VB.BIBLE.TXT",    "PACK"); }
 	@Test public void testTextPack21() throws Exception { testText("VB.CP.HTML",      "PACK"); }
-	@Test public void testTextPack22() throws Exception { testText("VB.ENWIK8.XML",   "PACK"); }
 	@Test public void testTextPack23() throws Exception { testText("VB.FIELDS.C",     "PACK"); }
 	@Test public void testTextPack24() throws Exception { testText("VB.GRAMMAR.LSP",  "PACK"); }
 	@Test public void testTextPack25() throws Exception { testText("VB.LCET10.TXT",   "PACK"); }
@@ -93,13 +92,12 @@ public class AppTest
 	@Test public void testTextSPack06() throws Exception { testText("FB.BIBLE.TXT",    "SPACK"); }
 	@Test public void testTextSPack07() throws Exception { testText("FB.CP.HTML",      "SPACK"); }
 	@Test public void testTextSPack09() throws Exception { testText("FB.FIELDS.C",     "SPACK"); }
-	@Test public void testTextSPack00() throws Exception { testText("FB.GRAMMAR.LSP",  "SPACK"); }
+	@Test public void testTextSPack10() throws Exception { testText("FB.GRAMMAR.LSP",  "SPACK"); }
 	@Test public void testTextSPack12() throws Exception { testText("FB.LCET10.TXT",   "SPACK"); }
 	@Test public void testTextSPack18() throws Exception { testText("FB.WORLD192.TXT", "SPACK"); }
 	@Test public void testTextSPack19() throws Exception { testText("FB.XARGS",        "SPACK"); }
 	@Test public void testTextSPack20() throws Exception { testText("VB.BIBLE.TXT",    "SPACK"); }
 	@Test public void testTextSPack21() throws Exception { testText("VB.CP.HTML",      "SPACK"); }
-	@Test public void testTextSPack22() throws Exception { testText("VB.ENWIK8.XML",   "SPACK"); }
 	@Test public void testTextSPack23() throws Exception { testText("VB.FIELDS.C",     "SPACK"); }
 	@Test public void testTextSPack24() throws Exception { testText("VB.GRAMMAR.LSP",  "SPACK"); }
 	@Test public void testTextSPack25() throws Exception { testText("VB.LCET10.TXT",   "SPACK"); }
