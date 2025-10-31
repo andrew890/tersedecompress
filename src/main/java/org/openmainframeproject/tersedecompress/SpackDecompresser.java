@@ -1,14 +1,12 @@
 package org.openmainframeproject.tersedecompress;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 class SpackDecompresser extends TerseDecompresser {
 	
-	SpackDecompresser(InputStream instream, OutputStream outputStream, TerseHeader header)
+	SpackDecompresser(InputStream instream, OutputFile outputStream)
 	{
-		super(instream, outputStream, header);
+		super(instream, outputStream);
 	}
 	
     private int node =0;
@@ -28,7 +26,7 @@ class SpackDecompresser extends TerseDecompresser {
                 Stack.Data[Stack.Head] = Tree[X].Right;
                 X = Tree[X].Left;
             }
-            PutChar( X );
+            stream.PutChar( X );
 
             if (Stack.Head > 0) {
                 X = Stack.Data[Stack.Head];

@@ -1,14 +1,12 @@
 package org.openmainframeproject.tersedecompress;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 class NonSpackDecompresser extends TerseDecompresser {
 		
-	NonSpackDecompresser(InputStream instream, OutputStream outputStream, TerseHeader header)
+	NonSpackDecompresser(InputStream instream, OutputFile outputStream)
 	{
-		super(instream, outputStream, header);
+		super(instream, outputStream);
 	}
 	
     /* 
@@ -74,11 +72,11 @@ class NonSpackDecompresser extends TerseDecompresser {
             Forward [0] = h;
             Backward[h] = 0;
             CharExt [x] = d;
-            PutChar(d);
+            stream.PutChar(d);
             x = y;
             while (p != 0) {
                 e = Father[p];
-                PutChar( CharExt[p]);
+                stream.PutChar( CharExt[p]);
                 Father[p] = d;
                 d = p;
                 p = e;
